@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,300;1,400&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+--Blue: hsl(246, 80%, 60%);
+--Light-orange: hsl(15, 100%, 70%);
+--Soft-blue: hsl(195, 74%, 62%);
+--Light-red: hsl(348, 100%, 68%);
+--Lime-green: hsl(145, 58%, 55%);
+--Violet: hsl(264, 64%, 52%);
+--Soft-orange: hsl(43, 84%, 65%);
+--Very-dark-blue:hsl(226, 43%, 10%);
+--Dark-blue: hsl(235, 46%, 20%);
+--Desaturated-blue: hsl(235, 45%, 61%);
+--Pale-Blue: hsl(236, 100%, 87%);
+}
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--Very-dark-blue);
+    color: var(--Pale-Blue);
+}
+
+.main-container{
+    position: relative;
+    width: 328px;
+    margin: 158px auto;
+}
+
+.first-section{
+    position: relative;
+}
+
+.main-card__user{
+    z-index: 1;
+    background-color:var(--Blue);
+    display: flex;
+    position: absolute;
+    border-radius: 16px;
+    padding: 30px;
+    width: 100%;
+}
+
+.main-card__img{
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.main-card__tittle{
+    font-size: 0.9em;
+    margin: 10px 0 4px ;
+}
+
+.main-card__name{
+    font-size: 1.3em;
+    font-weight: 300;
+    color: white;
+}
+
+.main-card__dates{
+    background-color: var(--Dark-blue);
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+    align-items: center;
+    font-size: 1.2em;
+    position: absolute;
+    width: 100%;
+    top: 115px;
+}
+.main-card__frequency:hover{
+    cursor: pointer;
+    color: #fff;
+}
+.second-section{
+    padding-top:230px;
+}
+
+.card{
+    margin-bottom: 105px;
+    position: relative;
+}
+
+.card__background{
+    background-color: var(--Light-orange);
+    height: 80px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px ;
+    overflow: hidden;
+}
+.card__img{
+    margin-top: -10px;
+    padding-left: 235px ;
+}
+.card__details{
+    background-color: var(--Dark-blue);
+    display: flex;
+    flex-direction: column;
+    height: 122px;
+    justify-content: space-between;
+    padding: 25px;
+    border-radius: 16px;
+    position: absolute;
+    width: 100%;
+    bottom: -75px;
+}
+
+.card__details:hover{
+    background-color: var(--Desaturated-blue);
+    cursor: pointer;
+
+}
+
+.card__activity, .card__time{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card__tittle{
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.7em;
+}
+.card__hour{
+    font-size: 1.7em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.atribution{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+@media(min-width:1200px){
+    .main-container{
+        width: 1150px;
+        display: flex;
+    }
+    .first-section{
+        padding-top: 20px;
+        width: 290px;
+        height: 564px;
+    }
+
+    .second-section{
+        display: grid;
+        height: 564px;
+        width: 860px;
+        padding-top: 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 24px;
+    }
+    .main-card__user{
+        height: 370px;
+        flex-direction: column;
+    }
+    .main-card__img{
+        margin-top: 10px;
+        margin-left: 80px;
+        width: 90px;
+        margin-bottom: 45px;
+    }
+    .main-card__tittle{
+        font-size: 1em;
+        text-align: center;
+    }
+    .main-card__name{
+        font-size: 2.4em;
+        text-align: center;
+    }
+    .main-card__dates{
+        margin-top: 230px;
+        height: 200px;
+        flex-direction: column;
+        padding: 40px 32px 18px;
+    }
+    .card{
+        margin-bottom: 25px;
+        width: 240px;
+        height: 244px;
+
+    }
+    .card__img{
+        padding-left: 140px;
+    }
+    .card__details{
+        height: 200px;
+        bottom: 10px;
+    }
+    .card__time{
+        height: 300px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+
+    .card__tittle{
+        font-size: 0.7em;
+    }
+}
